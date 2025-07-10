@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1b2a; 
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    animation: starsMove 60s linear infinite;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.galeri-header {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+.galeri-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.header-image {
+    background-image: url('https://i.ibb.co/X4QzFbN/header.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.tahun {
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+.deskripsi {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tanggal {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.judul {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+.not-found-message {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #cccccc;
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: white;
+    font-family: 'Garamond', serif;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+form input,
+form label,
+form button {
+    font-family: 'Garamond', serif;
+}
+
+form {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;
+    margin: 20px auto;
+}
+
+
+
+
+@keyframes skyFade {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes starsMove {
+    0% {
+        background-position: 0 0, 50px 50px;
+    }
+    100% {
+        background-position: 1000px 1000px, 1050px 1050px;
+    }
+}

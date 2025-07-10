@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Tambahkan class untuk header -->
+        <h1 class="galeri-header">Art Gallery</h1>
+
+        <form method="get" action="/">
+            <label for="tahun">Tahun:</label>
+            <input type="text" id="tahun" name="tahun" placeholder="Contoh: 2023">
+            <button type="submit">cari</button>
+        </form>
+
+        <div class="gallery">
+        {% if karya|length > 0 %}
+            {% for k in karya %}
+                <div class="card">
+                    <img src="{{ url_for('static', filename=k.gambar) }}" alt="{{ k.judul }}">
+                    <h3>{{ k.judul }}</h3>
+                    <p>Tahun: {{ k.tahun }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+        <p class="not-found-message">
+            Tidak ada gambar yang tersedia untuk tahun ini.
+        </p>
+
+        {% endif %}
+    </div>
+
+    </div>
+</body>
+</html>
