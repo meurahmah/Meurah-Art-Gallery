@@ -1,2 +1,2 @@
 # Meurah-Art-Gallery
-hasil dari pembelajaran di algorythmics
+Projek pembuatan web dengan tema web personal. Hasil dari pembelajaran di algorythmics
